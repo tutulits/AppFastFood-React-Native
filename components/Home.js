@@ -7,7 +7,7 @@ import {
   Text,
 } from 'react-native';
 
-export default function App() {
+export default function Sobremesa() {
   return (
     <SafeAreaView style={estilo.container}>
       <Text style={estilo.titulo}>Tutulit's Burguer</Text>
@@ -54,14 +54,40 @@ export default function App() {
       </ScrollView>
       <Text style={estilo.cardapio}>Cardápio</Text>
       <Text style={estilo.grelhado}>Sanduiches Grelhado</Text>
-      
+
+      <ScrollView horizontal>
       <View style={estilo.cardGrelhado}>
         <Image
           style={estilo.imgGrelhado}
           source={require('../assets/burguer4.jpg')}
         />
-        <Text style={estilo.tituloCard}>2 Combo X-Tudo</Text>
+        <Text style={estilo.tituloCard}>2 Combo X-Tudo</Text>     
       </View>
+      <View style={estilo.cardGrelhado}>
+        <Image
+          style={estilo.imgGrelhado}
+          source={require('../assets/burguer4.jpg')}
+        />
+        <Text style={estilo.tituloCard}>2 Combo X-Tudo</Text>     
+      </View>
+      </ScrollView>
+      <ScrollView horizontal>
+      <View style={estilo.cardGrelhado}>
+        <Image
+          style={estilo.imgGrelhado}
+          source={require('../assets/burguer4.jpg')}
+        />
+        <Text style={estilo.tituloCard}>2 Combo X-Tudo</Text>     
+      </View>
+      <View style={estilo.cardGrelhado}>
+        <Image
+          style={estilo.imgGrelhado}
+          source={require('../assets/burguer4.jpg')}
+        />
+        <Text style={estilo.tituloCard}>2 Combo X-Tudo</Text>     
+      </View>
+      </ScrollView>
+      
     </SafeAreaView>
   );
 }
@@ -93,6 +119,7 @@ const estilo = StyleSheet.create({
     fontSize: 25,
     marginTop: 40,
     fontWeight: 'bold',
+    marginBottom: 8
   },
   tituloCard: {
     fontFamily: 'Montserrat-Regular',
@@ -111,13 +138,15 @@ const estilo = StyleSheet.create({
   },
   imgGrelhado: {
     height: 160,
-    width: 200,
+    width: 175,
+    borderRadius: 10, 
   },
   cardGrelhado: {
-    marginBottom: 245,
+    marginBottom: 18,
     marginHorizontal: 10,
     backgroundColor: '#fff',
     borderRadius: 10,
-    padding: 8
-  }
+    padding: 8,
+    marginRight: 2,
+  },
 });
